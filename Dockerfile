@@ -8,8 +8,10 @@ FROM --platform=linux/amd64 node:16-alpine3.14 AS builder
 WORKDIR /app
 # Copy all files from current directory to working dir in image
 COPY . /app/
-RUN yarn install
-RUN yarn build
+RUN corepack enable
+RUN corepack prepare pnpm@7.29.3 --activate
+RUN pnpm install
+RUN pnpm build
 
 
 FROM --platform=linux/amd64 nginx:alpine
