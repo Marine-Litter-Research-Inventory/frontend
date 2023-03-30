@@ -1,0 +1,26 @@
+{
+  "name": "vite-template-solid",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.9.5",
+    "vite": "^4.1.4",
+    "vite-plugin-solid": "^2.6.1",
+    "vite-tsconfig-paths": "^4.0.7"
+  },
+  "dependencies": {
+    "@lyrasearch/lyra": "^0.4.11",
+    "@lyrasearch/plugin-match-highlight": "^0.1.0",
+    "@suid/icons-material": "^0.5.10",
+    "@suid/material": "^0.10.2",
+    "@suid/vite-plugin": "^0.1.2",
+    "solid-js": "^1.6.14"
+  }
+}
