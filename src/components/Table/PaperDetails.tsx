@@ -35,7 +35,6 @@ export default function PaperDetails(props: PaperDetailsProps) {
           position: "absolute",
           top: "40%",
           left: "15%",
-          "border-radius": "10px",
         }}
       >
         <Table stickyHeader aria-label="simple table">

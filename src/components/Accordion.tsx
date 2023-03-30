@@ -9,13 +9,12 @@ export default function Accordion(props: AccordionProps) {
   const [open, setOpen] = Solid.createSignal(false);
 
   return (
-    <Paper style={{ width: "100%", "border-radius": "20px" }}>
+    <Paper style={{ width: "100%" }}>
       <div
         onClick={(e) => setOpen(!open())}
         style={{
           padding: "24px 20px",
           background: "#C8A464",
-          "border-radius": open() ? "20px 20px 0 0" : "20px",
         }}
       >
         <Typography variant="h6">{props.title}</Typography>

@@ -2,12 +2,12 @@ import * as Solid from "solid-js";
 import { Button, Typography, CircularProgress } from "@suid/material";
 
 import ResultTable from "components/Table/Index";
-import Banner from "pages/landing/Banner";
+import Banner from "components/Banner";
 import SearchBar from "components/SearchBar";
-import SectionA from "pages/landing/SectionA";
-import SectionB from "pages/landing/SectionB";
-import SectionC from "pages/landing/SectionC";
-import SectionP from "pages/landing/SectionP";
+import SectionA from "pages/search/SectionA";
+import SectionB from "pages/search/SectionB";
+import SectionC from "pages/search/SectionC";
+import SectionP from "pages/search/SectionP";
 
 import { create, insertBatch, search } from "@lyrasearch/lyra";
 import { afterInsert } from "@lyrasearch/plugin-match-highlight";
@@ -55,12 +55,10 @@ export default function Landing<Component>() {
 
   return (
     <div>
-      <Banner title="Author Search Tool" />
       <div style={{ height: "32px" }} />
       <div style={{ width: "80%", margin: "auto" }}>
         <Typography variant="h3" style={{ "text-align": "center" }}>
-          Searchable & Dynamic <br />
-          Catalogue of Regional Experts
+          Research Expertise Catalogue
         </Typography>
         <br />
       </div>
@@ -79,7 +77,7 @@ export default function Landing<Component>() {
             type="submit"
             variant="contained"
             onClick={() => onSubmit("")}
-            sx={{ height: "56px", margin: "20px 0 0 0", background: "#9D4A55" }}
+            sx={{ height: "56px", margin: "20px 0 0 0", background: "#9C4A55" }}
           >
             Submit Search Criteria
           </Button>
