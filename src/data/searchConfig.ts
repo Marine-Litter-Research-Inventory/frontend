@@ -14,7 +14,7 @@ function formatOption<Option>(pattern: string, title: string) {
 }
 
 export const searchConfig = {
-  "Country/Territory": {
+  "Country/Territory1": {
     column: "Location/Territory studied",
     operator: "regexp",
     options: [
@@ -25,6 +25,12 @@ export const searchConfig = {
       formatOption("Korea", "RO Korea"),
       formatOption("Japan", "Japan"),
       formatOption("Laos", "Laos"),
+    ],
+  },
+  "Country/Territory2": {
+    column: "Location/Territory studied",
+    operator: "regexp",
+    options: [
       formatOption("Malaysia", "Malaysia"),
       formatOption("Myanmar", "Myanmar"),
       formatOption("Philippines", "Philippines"),
@@ -34,7 +40,7 @@ export const searchConfig = {
       formatOption("Vietnam", "Vietnam"),
     ],
   },
-  "Water Body": {
+  "Water Body1": {
     column: "Relevant Water Body_General",
     operator: "regexp",
     options: [
@@ -44,6 +50,12 @@ export const searchConfig = {
       formatOption("East China Sea", "East China Sea"),
       formatOption("Indian Ocean", "Indian Ocean"),
       formatOption("Java Seas", "Java Seas"),
+    ],
+  },
+  "Water Body2": {
+    column: "Relevant Water Body_General",
+    operator: "regexp",
+    options: [
       formatOption("Mekong Delta", "Mekong Delta"),
       formatOption("Pacific Ocean", "Pacific Ocean"),
       formatOption("South China Sea", "South China Sea"),

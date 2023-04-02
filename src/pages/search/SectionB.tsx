@@ -1,53 +1,75 @@
 import OptionsBox from "components/OptionsBox/Index";
 import { searchConfig } from "data/searchConfig";
-import { Typography } from "@suid/material";
+import { Typography, Grid } from "@suid/material";
 import Accordion from "components/Accordion";
 // =============================================================================
 
 export default function SectionB() {
   return (
     <Accordion title="(B) Select Technical Research Expertise and Equipment for your search:">
-      <Typography variant="h6">
-        B1 Plastic sizes examined in any research &gt;
-      </Typography>
-      <OptionsBox config={searchConfig["Plastic sizes examined"]} />
+      <Grid container spacing={3}>
+        <Grid item xs={6}>
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Plastic sizes examined in any research
+          </Typography>
+          <OptionsBox config={searchConfig["Plastic sizes examined"]} />
 
-      <Typography variant="h6">
-        B2 Plastic Polymer Identification &gt;
-      </Typography>
-      <OptionsBox
-        config={searchConfig["Plastic Polymer Identification Technique"]}
-      />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Plastic Polymer Identification
+          </Typography>
+          <OptionsBox
+            config={searchConfig["Plastic Polymer Identification Technique"]}
+          />
 
-      <Typography variant="h6" style={{ display: "inline-block" }}>
-        B4 Plastic Polymer Characterisation (Colour and/or Shape) &gt;
-      </Typography>
-      <OptionsBox
-        config={
-          searchConfig["Plastic Polymer Characterisation (Colour and/or Shape)"]
-        }
-      />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Plastic Polymer Characterisation (Colour and/or Shape)
+          </Typography>
+          <OptionsBox
+            config={
+              searchConfig[
+                "Plastic Polymer Characterisation (Colour and/or Shape)"
+              ]
+            }
+          />
 
-      <Typography variant="h6">B5 Field Sampling &gt;</Typography>
-      <OptionsBox config={searchConfig["Field Sampling"]} />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Field Sampling
+          </Typography>
+          <OptionsBox config={searchConfig["Field Sampling"]} />
+        </Grid>
 
-      <Typography variant="h6">B6 Biota Sampling and Analysis &gt;</Typography>
-      <OptionsBox config={searchConfig["Biota Sampling and Analysis"]} />
+        <Grid item xs={6}>
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Biota Sampling and Analysis
+          </Typography>
+          <OptionsBox config={searchConfig["Biota Sampling and Analysis"]} />
 
-      <Typography variant="h6">B7 Microbes and pathogens &gt;</Typography>
-      <OptionsBox config={searchConfig["Microbes and pathogens"]} />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Microbes and pathogens
+          </Typography>
+          <OptionsBox config={searchConfig["Microbes and pathogens"]} />
 
-      <Typography variant="h6">B8 POPs and Heavy Metals &gt;</Typography>
-      <OptionsBox config={searchConfig["POPs and Heavy Metals"]} />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            POPs and Heavy Metals
+          </Typography>
+          <OptionsBox config={searchConfig["POPs and Heavy Metals"]} />
 
-      <Typography variant="h6">B9 Modelling &gt;</Typography>
-      <OptionsBox config={searchConfig["Modelling"]} />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Modelling
+          </Typography>
+          <OptionsBox config={searchConfig["Modelling"]} />
 
-      <Typography variant="h6">B10 Geospatial Methods &gt;</Typography>
-      <OptionsBox config={searchConfig["Geospatial Methods"]} />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Geospatial Methods
+          </Typography>
+          <OptionsBox config={searchConfig["Geospatial Methods"]} />
 
-      <Typography variant="h6">B11 Literature Review &gt;</Typography>
-      <OptionsBox config={searchConfig["Literature Review"]} />
+          <Typography variant="body1" style={{ "font-weight": "bold" }}>
+            Literature Review
+          </Typography>
+          <OptionsBox config={searchConfig["Literature Review"]} />
+        </Grid>
+      </Grid>
     </Accordion>
   );
 }

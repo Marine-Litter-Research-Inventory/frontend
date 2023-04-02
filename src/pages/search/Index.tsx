@@ -2,8 +2,8 @@ import * as Solid from "solid-js";
 import { Button, Typography, CircularProgress } from "@suid/material";
 
 import ResultTable from "components/Table/Index";
-import Banner from "components/Banner";
 import SearchBar from "components/SearchBar";
+import Instruction from "pages/search/Instruction";
 import SectionA from "pages/search/SectionA";
 import SectionB from "pages/search/SectionB";
 import SectionC from "pages/search/SectionC";
@@ -57,13 +57,24 @@ export default function Landing<Component>() {
     <div>
       <div style={{ height: "32px" }} />
       <div style={{ width: "80%", margin: "auto" }}>
-        <Typography variant="h3" style={{ "text-align": "center" }}>
+        <Typography
+          variant="h4"
+          style={{ "text-align": "center", "font-weight": "bold" }}
+        >
           Research Expertise Catalogue
         </Typography>
         <br />
       </div>
 
-      <div style={{ width: "80%", margin: "auto" }}>
+      <div
+        style={{
+          width: "80%",
+          margin: "auto",
+          padding: "20px",
+          border: "2px solid black",
+        }}
+      >
+        <Instruction />
         <br />
         <SectionA />
         <br />
@@ -77,11 +88,17 @@ export default function Landing<Component>() {
             type="submit"
             variant="contained"
             onClick={() => onSubmit("")}
-            sx={{ height: "56px", margin: "20px 0 0 0", background: "#9C4A55" }}
+            sx={{
+              height: "56px",
+              margin: "20px 0 0 0",
+              background: "#9C4A55",
+              "&:hover": {
+                background: "#505641",
+              },
+            }}
           >
             Submit Search Criteria
           </Button>
-          <Typography>*without search keyword</Typography>
         </div>
       </div>
 

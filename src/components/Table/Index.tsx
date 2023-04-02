@@ -8,6 +8,7 @@ import {
   TableHead,
   TableRow,
   IconButton,
+  Typography,
 } from "@suid/material";
 import PaperDetails, { setContent } from "components/Table/PaperDetails";
 
@@ -44,11 +45,12 @@ export default function BasicTable(props: BasicTableProps) {
         component={Paper}
         style={{
           "max-height": "700px",
+          border: "2px solid black",
           "box-shadow": "0 0 10pxrgba(0, 0, 0, 0.2)",
           transition: "box-shadow 0.3s ease-in-out",
         }}
       >
-        <Table stickyHeader sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table stickyHeader sx={{ minWidth: 650 }} size="small">
           <TableHead>
             <TableRow>
               <Solid.For each={columns}>
@@ -145,6 +147,9 @@ export default function BasicTable(props: BasicTableProps) {
           </TableBody>
         </Table>
       </TableContainer>
+      <div style={{ "text-align": "right" }}>
+        <Typography variant="h6">Result counts: {props.rows.length}</Typography>
+      </div>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import * as Solid from "solid-js";
 import { AppBar, Box, Toolbar, Typography, Button } from "@suid/material";
+import logo from "assets/dugong.png"
 
 export const [tab, setTab] = Solid.createSignal(0);
 
@@ -8,6 +9,7 @@ export default function Banner(props: { title: string }) {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ background: "#F8E6DC" }}>
         <Toolbar>
+          <img src={logo} style={{ height: "48px", "margin-right": "20px" }} />
           <Typography
             variant="h6"
             component="div"

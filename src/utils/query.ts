@@ -26,7 +26,7 @@ export function formatQuery(query: QueryType) {
 }
 
 export async function fetchSearch(query: QueryResultType) {
-  return await fetch("http://188.166.237.116:8000/api", {
+  return await fetch("http://marseadata.org:8000/api", {
     method: "POST",
     headers: {
       Accept: "application/json",

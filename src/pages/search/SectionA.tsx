@@ -1,7 +1,7 @@
 import * as Solid from "solid-js";
 import OptionsBox from "components/OptionsBox/Index";
 import { searchConfig } from "data/searchConfig";
-import { Grid, Typography, Divider } from "@suid/material";
+import { Grid, Typography } from "@suid/material";
 import Accordion from "components/Accordion";
 import { query, setQuery } from "components/SearchBar";
 
@@ -40,18 +40,18 @@ export default function SectionA() {
 
   return (
     <div>
-      <Typography variant="subtitle2" sx={{ textAlign: "center" }}>
-        Note that Country/Territory and Water Body are exclusive categories.
-        <br />
-        You may only select either Countries/Territories or Water Bodies. You
-        will not be able to select from both.
-      </Typography>
-      <br />
       <Grid container spacing={3}>
         <Grid item xs={6}>
           <Accordion title="(A1) Select Country/Territory for your search:">
             {A2Count() === 0 ? (
-              <OptionsBox config={searchConfig["Country/Territory"]} />
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <OptionsBox config={searchConfig["Country/Territory1"]} />
+                </Grid>
+                <Grid item xs={6}>
+                  <OptionsBox config={searchConfig["Country/Territory2"]} />
+                </Grid>
+              </Grid>
             ) : (
               <div>Please deselect all options in A2 to see options here</div>
             )}
@@ -61,7 +61,14 @@ export default function SectionA() {
         <Grid item xs={6}>
           <Accordion title="(A2) Select Water Body for your search:">
             {A1Count() === 0 ? (
-              <OptionsBox config={searchConfig["Water Body"]} />
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <OptionsBox config={searchConfig["Water Body1"]} />
+                </Grid>
+                <Grid item xs={6}>
+                  <OptionsBox config={searchConfig["Water Body2"]} />
+                </Grid>
+              </Grid>
             ) : (
               <div>Please deselect all options in A1 to see options here</div>
             )}
@@ -69,7 +76,6 @@ export default function SectionA() {
         </Grid>
       </Grid>
       <br />
-      <Divider sx={{ background: "black" }} />
     </div>
   );
 }

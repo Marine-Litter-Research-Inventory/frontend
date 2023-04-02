@@ -17,7 +17,9 @@ export default function Accordion(props: AccordionProps) {
           background: "#C8A464",
         }}
       >
-        <Typography variant="h6">{props.title}</Typography>
+        <Typography variant="body1" sx={{ fontWeight: "bolder" }}>
+          {props.title}
+        </Typography>
       </div>
       <div style={{ display: open() ? "block" : "none", padding: "20px 32px" }}>
         {props.children}

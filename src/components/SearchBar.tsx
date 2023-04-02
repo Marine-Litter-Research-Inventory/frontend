@@ -45,9 +45,16 @@ export default function SearchBar() {
       />
       <Button
         type="submit"
-        variant="outlined"
+        variant="contained"
         onClick={() => onSubmit(word())}
-        style={{ height: "56px", "margin-left": "20px" }}
+        sx={{
+          height: "56px",
+          marginLeft: "20px",
+          background: "#9C4A55",
+          "&:hover": {
+            background: "#505641",
+          },
+        }}
       >
         Search
       </Button>
