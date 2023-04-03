@@ -70,18 +70,26 @@ export default function Landing<Component>() {
         style={{
           width: "80%",
           margin: "auto",
-          padding: "20px",
-          border: "2px solid black",
         }}
       >
         <Instruction />
-        <br />
+      </div>
+      <br />
+      <div
+        style={{
+          width: "80%",
+          margin: "auto",
+          padding: "8px",
+          border: "2px solid black",
+        }}
+      >
+        <div style={{ height: "8px" }} />
         <SectionA />
-        <br />
+        <div style={{ height: "16px" }} />
         <SectionB />
-        <br />
+        <div style={{ height: "16px" }} />
         <SectionC />
-        <br />
+        <div style={{ height: "16px" }} />
         <SectionP />
         <div style={{ width: "100%", "text-align": "center" }}>
           <Button

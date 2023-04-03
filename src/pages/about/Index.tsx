@@ -6,19 +6,25 @@ export default function About() {
   return (
     <div
       style={{
-        width: "80%",
+        width: "60%",
         margin: "120px auto",
+        display: "flex",
+        "flex-direction": "column",
       }}
     >
-      <div>
+      <div style={{ display: "inline-block", margin: "auto" }}>
         <Typography variant="body1">
-          This search tool is building on the Regional Research Inventory
+          This search tool, which is building on the Regional Research Inventory
           Database project available at{" "}
           <a href="https://mapla-riv.web.app/" target="blank" rel="noopener">
             https://mapla-riv.web.app/
           </a>
+          , has been developed by the Centre for International Law (CIL) with
+          support from the Economic Research Institute for ASEAN and East Asia
+          (ERIA).
           <br />
-          It aims to identify experts and/or research institutions for
+          <br />
+          This tool aims to identify experts and/or research institutions for
           consultation:
         </Typography>
         <List>
@@ -56,10 +62,21 @@ export default function About() {
         }}
       >
         <img
-          src={ERIA}
-          style={{ "min-width": "100px", "max-width": "300px" }}
+          src={CIL}
+          style={{
+            "min-width": "200px",
+            "max-width": "240px",
+            "object-fit": "contain",
+          }}
         />
-        <img src={CIL} style={{ "min-width": "100px", "max-width": "300px" }} />
+        <img
+          src={ERIA}
+          style={{
+            "min-width": "200px",
+            "max-width": "240px",
+            "object-fit": "contain",
+          }}
+        />
       </div>
     </div>
   );

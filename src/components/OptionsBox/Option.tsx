@@ -59,8 +59,12 @@ export default function Option(props: OptionProps) {
       <Checkbox
         checked={props.checked}
         onChange={() => props.setChecked(!props.checked)}
+        sx={{ height: "32px" }}
       />
-      <Typography variant={props.solo ? "h6" : "body1"}>
+      <Typography
+        variant={props.solo ? "h6" : "body1"}
+        style={{ "font-size": "14px" }}
+      >
         {props.title}
       </Typography>
     </div>

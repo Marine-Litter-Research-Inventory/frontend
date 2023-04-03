@@ -40,6 +40,11 @@ export default function BasicTable(props: BasicTableProps) {
 
   return (
     <div>
+      <div style={{ "text-align": "right" }}>
+        <Typography variant="h6">
+          Number of authors: {props.rows.length}
+        </Typography>
+      </div>
       <PaperDetails open={openModal()} setOpen={setOpenModal} />
       <TableContainer
         component={Paper}
@@ -147,9 +152,6 @@ export default function BasicTable(props: BasicTableProps) {
           </TableBody>
         </Table>
       </TableContainer>
-      <div style={{ "text-align": "right" }}>
-        <Typography variant="h6">Result counts: {props.rows.length}</Typography>
-      </div>
     </div>
   );
 }

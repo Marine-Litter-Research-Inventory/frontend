@@ -13,7 +13,7 @@ export default function Accordion(props: AccordionProps) {
       <div
         onClick={(e) => setOpen(!open())}
         style={{
-          padding: "24px 20px",
+          padding: "12px 20px",
           background: "#C8A464",
         }}
       >

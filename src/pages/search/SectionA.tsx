@@ -39,43 +39,40 @@ export default function SectionA() {
   });
 
   return (
-    <div>
-      <Grid container spacing={3}>
-        <Grid item xs={6}>
-          <Accordion title="(A1) Select Country/Territory for your search:">
-            {A2Count() === 0 ? (
-              <Grid container spacing={3}>
-                <Grid item xs={6}>
-                  <OptionsBox config={searchConfig["Country/Territory1"]} />
-                </Grid>
-                <Grid item xs={6}>
-                  <OptionsBox config={searchConfig["Country/Territory2"]} />
-                </Grid>
+    <Grid container spacing={2}>
+      <Grid item xs={6}>
+        <Accordion title="(A1) Select Country/Territory for your search:">
+          {A2Count() === 0 ? (
+            <Grid container spacing={3}>
+              <Grid item xs={6}>
+                <OptionsBox config={searchConfig["Country/Territory1"]} />
               </Grid>
-            ) : (
-              <div>Please deselect all options in A2 to see options here</div>
-            )}
-          </Accordion>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Accordion title="(A2) Select Water Body for your search:">
-            {A1Count() === 0 ? (
-              <Grid container spacing={3}>
-                <Grid item xs={6}>
-                  <OptionsBox config={searchConfig["Water Body1"]} />
-                </Grid>
-                <Grid item xs={6}>
-                  <OptionsBox config={searchConfig["Water Body2"]} />
-                </Grid>
+              <Grid item xs={6}>
+                <OptionsBox config={searchConfig["Country/Territory2"]} />
               </Grid>
-            ) : (
-              <div>Please deselect all options in A1 to see options here</div>
-            )}
-          </Accordion>
-        </Grid>
+            </Grid>
+          ) : (
+            <div>Please deselect all options in A2 to see options here</div>
+          )}
+        </Accordion>
       </Grid>
-      <br />
-    </div>
+
+      <Grid item xs={6}>
+        <Accordion title="(A2) Select Water Body for your search:">
+          {A1Count() === 0 ? (
+            <Grid container spacing={3}>
+              <Grid item xs={6}>
+                <OptionsBox config={searchConfig["Water Body1"]} />
+              </Grid>
+              <Grid item xs={6}>
+                <OptionsBox config={searchConfig["Water Body2"]} />
+              </Grid>
+            </Grid>
+          ) : (
+            <div>Please deselect all options in A1 to see options here</div>
+          )}
+        </Accordion>
+      </Grid>
+    </Grid>
   );
 }
