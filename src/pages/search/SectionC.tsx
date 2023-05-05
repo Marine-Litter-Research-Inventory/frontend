@@ -42,7 +42,7 @@ export default function SectionC() {
             }
           />
           <Typography variant="body1">
-            Socio-economic impacts, damage and opportunity
+            Discussions on methodology testing and effectiveness
           </Typography>
           <OptionsBox
             config={

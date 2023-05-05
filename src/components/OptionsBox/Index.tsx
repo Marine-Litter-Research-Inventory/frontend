@@ -8,6 +8,8 @@ interface OptionsBoxProps {
   solo?: boolean;
 }
 
+export const [reset, setReset] = Solid.createSignal(false);
+
 export default function OptionsBox(props: OptionsBoxProps) {
   const { column, operator, options } = props.config;
 
@@ -16,6 +18,10 @@ export default function OptionsBox(props: OptionsBoxProps) {
       <Solid.For each={options}>
         {(option, i) => {
           const [checked, setChecked] = Solid.createSignal(false);
+
+          Solid.createEffect(() => {
+            if (reset()) setChecked(false);
+          });
 
           return (
             <div style={{ display: "flex" }}>

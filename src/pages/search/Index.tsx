@@ -1,6 +1,7 @@
 import * as Solid from "solid-js";
 import { Button, Typography, CircularProgress } from "@suid/material";
 
+import { setReset } from "components/OptionsBox/Index";
 import ResultTable from "components/Table/Index";
 import SearchBar from "components/SearchBar";
 import Instruction from "pages/search/Instruction";
@@ -92,6 +93,25 @@ export default function Landing<Component>() {
         <div style={{ height: "16px" }} />
         <SectionP />
         <div style={{ width: "100%", "text-align": "center" }}>
+          <Button
+            type="submit"
+            variant="contained"
+            onClick={() => {
+              setReset(true);
+              setReset(false);
+            }}
+            sx={{
+              height: "56px",
+              margin: "20px 20px 0 0",
+              background: "#9C4A55",
+              "&:hover": {
+                background: "#505641",
+              },
+            }}
+          >
+            Reset
+          </Button>
+
           <Button
             type="submit"
             variant="contained"
