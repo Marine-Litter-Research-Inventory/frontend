@@ -14,6 +14,11 @@ function formatOption<Option>(pattern: string, title: string) {
 }
 
 export const searchConfig = {
+  "Exclude Regional": {
+    column: "Geographical Scale",
+    operator: "regexp",
+    options: [formatOption("Country", "Exclude Regional Paper")],
+  },
   "Country/Territory1": {
     column: "Location/Territory studied",
     operator: "regexp",

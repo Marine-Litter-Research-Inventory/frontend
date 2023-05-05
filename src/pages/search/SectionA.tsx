@@ -43,14 +43,18 @@ export default function SectionA() {
       <Grid item xs={6}>
         <Accordion title="(A1) Select Country/Territory for your search:">
           {A2Count() === 0 ? (
-            <Grid container spacing={3}>
-              <Grid item xs={6}>
-                <OptionsBox config={searchConfig["Country/Territory1"]} />
+            <div>
+              <OptionsBox solo config={searchConfig["Exclude Regional"]} />
+              <div style={{ height: "16px" }} />
+              <Grid container spacing={3}>
+                <Grid item xs={6}>
+                  <OptionsBox config={searchConfig["Country/Territory1"]} />
+                </Grid>
+                <Grid item xs={6}>
+                  <OptionsBox config={searchConfig["Country/Territory2"]} />
+                </Grid>
               </Grid>
-              <Grid item xs={6}>
-                <OptionsBox config={searchConfig["Country/Territory2"]} />
-              </Grid>
-            </Grid>
+            </div>
           ) : (
             <div>Please deselect all options in A2 to see options here</div>
           )}

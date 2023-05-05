@@ -64,7 +64,11 @@ export default function SearchBar() {
 
 export function onSubmit(term: string) {
   setSearchTerm(term);
-  setSearch(formatQuery(query()));
+
+  let temp = formatQuery(query());
+  console.log(temp);
+
+  if ("Geographical Scale" in temp) setSearch(temp);
   // console.log(search());
   // console.log(searchTerm());
 }
