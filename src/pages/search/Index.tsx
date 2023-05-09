@@ -112,7 +112,7 @@ export default function Landing<Component>() {
             Reset
           </Button>
 
-          <Button
+          {/* <Button
             type="submit"
             variant="contained"
             onClick={() => onSubmit("")}
@@ -126,7 +126,7 @@ export default function Landing<Component>() {
             }}
           >
             Submit Search Criteria
-          </Button>
+          </Button> */}
         </div>
       </div>
 

@@ -40,6 +40,9 @@ export default function SectionA() {
 
   return (
     <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <Typography variant="h6">Search criteria:</Typography>
+      </Grid>
       <Grid item xs={6}>
         <Accordion title="(A1) Select Country/Territory for your search:">
           {A2Count() === 0 ? (
