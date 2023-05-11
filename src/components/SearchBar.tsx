@@ -10,9 +10,9 @@ export const [query, setQuery] = Solid.createSignal<{ [index: string]: any }>({
 export const [searchTerm, setSearchTerm] = Solid.createSignal("");
 export const [searchResult, setSearchResult] = Solid.createSignal<any>();
 export const [search, setSearch] = Solid.createSignal();
+export const [word, setWord] = Solid.createSignal("");
 
 export default function SearchBar() {
-  const [word, setWord] = Solid.createSignal("");
   //@ts-ignore
   const [result] = Solid.createResource(search, fetchSearch);
 
@@ -43,21 +43,6 @@ export default function SearchBar() {
             onSubmit((e.target as HTMLInputElement)?.value);
         }}
       />
-      <Button
-        type="submit"
-        variant="contained"
-        onClick={() => onSubmit(word())}
-        sx={{
-          height: "56px",
-          marginLeft: "20px",
-          background: "#9C4A55",
-          "&:hover": {
-            background: "#505641",
-          },
-        }}
-      >
-        Search
-      </Button>
     </div>
   );
 }

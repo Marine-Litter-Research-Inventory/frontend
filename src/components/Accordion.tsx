@@ -1,5 +1,5 @@
 import * as Solid from "solid-js";
-import { Paper, Typography } from "@suid/material";
+import { Box, Paper, Typography } from "@suid/material";
 
 interface AccordionProps {
   title: string;
@@ -9,18 +9,19 @@ export default function Accordion(props: AccordionProps) {
   const [open, setOpen] = Solid.createSignal(false);
 
   return (
-    <Paper style={{ width: "100%" }}>
-      <div
+    <Paper sx={{ width: "100%" }}>
+      <Box
         onClick={(e) => setOpen(!open())}
-        style={{
+        sx={{
           padding: "12px 20px",
           background: "#C8A464",
+          "&:hover": { cursor: "pointer", background: "#F8E6DC" },
         }}
       >
         <Typography variant="body1" sx={{ fontWeight: "bolder" }}>
           {props.title}
         </Typography>
-      </div>
+      </Box>
       <div style={{ display: open() ? "block" : "none", padding: "20px 32px" }}>
         {props.children}
       </div>

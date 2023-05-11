@@ -21,7 +21,9 @@ export default function About() {
           </a>
           , has been developed by the Centre for International Law (CIL) with
           support from the Economic Research Institute for ASEAN and East Asia
-          (ERIA).
+          (ERIA) as well as the MicroSEAP project, NRF-NERC-SEAP-2020: Microbial
+          transformation of plastics in SE Asian Seas: a hazard and solution
+          (microSEAP).
           <br />
           <br />
           This tool aims to identify experts and/or research institutions for
@@ -64,6 +66,7 @@ export default function About() {
         <img
           src={CIL}
           style={{
+            "margin-right": "16px",
             "min-width": "200px",
             "max-width": "240px",
             "object-fit": "contain",

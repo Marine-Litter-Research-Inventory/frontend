@@ -14,7 +14,7 @@ import { create, insertBatch, search } from "@lyrasearch/lyra";
 import { afterInsert } from "@lyrasearch/plugin-match-highlight";
 import schemaDB from "data/schemaDB";
 
-import { searchResult, searchTerm, onSubmit } from "components/SearchBar";
+import { searchResult, searchTerm, onSubmit, word } from "components/SearchBar";
 import { filterColumn, generateRows } from "utils/table";
 import type { Row } from "utils/table";
 
@@ -81,9 +81,9 @@ export default function Landing<Component>() {
           width: "80%",
           margin: "auto",
           padding: "8px",
-          border: "2px solid black",
         }}
       >
+        <Typography variant="h6">Search criteria:</Typography>
         <div style={{ height: "8px" }} />
         <SectionA />
         <div style={{ height: "16px" }} />
@@ -92,7 +92,13 @@ export default function Landing<Component>() {
         <SectionC />
         <div style={{ height: "16px" }} />
         <SectionP />
-        <div style={{ width: "100%", "text-align": "center" }}>
+      </div>
+
+      <div style={{ margin: "40px auto", width: "80%" }}>
+        <Typography variant="h6">Search term(s):</Typography>
+        <SearchBar />
+
+        <div style={{ "text-align": "center" }}>
           <Button
             type="submit"
             variant="contained"
@@ -112,33 +118,26 @@ export default function Landing<Component>() {
             Reset
           </Button>
 
-          {/* <Button
+          <Button
             type="submit"
             variant="contained"
-            onClick={() => onSubmit("")}
+            onClick={() => onSubmit(word())}
             sx={{
               height: "56px",
-              margin: "20px 0 0 0",
+              margin: "20px 20px 0 0",
               background: "#9C4A55",
               "&:hover": {
                 background: "#505641",
               },
             }}
           >
-            Submit Search Criteria
-          </Button> */}
+            Search
+          </Button>
         </div>
-      </div>
-
-      <div style={{ margin: "40px auto", width: "80%" }}>
-        <SearchBar />
       </div>
 
       <div style={{ width: "88%", margin: "auto" }}>
         <ResultTable rows={rows()} />
-        {/* <div style={{ "text-align": "center", margin: "20px 0" }}>
-          <Solid.Show when={rows().length === 0}>Loading</Solid.Show>
-        </div> */}
       </div>
 
       <div style={{ height: "200px" }} />
