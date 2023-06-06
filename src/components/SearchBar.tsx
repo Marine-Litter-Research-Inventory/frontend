@@ -51,6 +51,6 @@ export function onSubmit(term: string) {
   setSearchTerm(term);
   let temp = formatQuery(query());
   setSearch(temp);
-  // console.log(search());
-  // console.log(searchTerm());
+  // console.log("Search Term: ", searchTerm());
+  // console.log("Search query: ", search());
 }
