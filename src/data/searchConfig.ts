@@ -72,9 +72,8 @@ export const searchConfig = {
       formatOption("Taiwan Strait", "Taiwan Strait"),
     ],
   },
-  "Plastic sizes examined": {
-    // FIX: Fix this to match the server later on
-    column: "Plastic Sizes Examined",
+  "Plastic Examined_Size or Type": {
+    column: "Plastic Examined_Size or Type",
     operator: "regexp",
     options: [
       formatOption("Microplastic", "Micro plastic"),
