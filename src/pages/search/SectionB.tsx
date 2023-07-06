@@ -12,7 +12,7 @@ export default function SectionB() {
           <Typography variant="body1" style={{ "font-weight": "bold" }}>
             Plastic sizes examined in any research
           </Typography>
-          <OptionsBox config={searchConfig["Plastic sizes examined"]} />
+          <OptionsBox config={searchConfig["Plastic Examined_Size or Type"]} />
 
           <Typography variant="body1" style={{ "font-weight": "bold" }}>
             Plastic Polymer Identification
@@ -27,7 +27,7 @@ export default function SectionB() {
           <OptionsBox
             config={
               searchConfig[
-                "Plastic Polymer Characterisation (Colour and/or Shape)"
+              "Plastic Polymer Characterisation (Colour and/or Shape)"
               ]
             }
           />
